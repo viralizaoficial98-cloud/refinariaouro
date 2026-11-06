@@ -1,4 +1,5 @@
 import { HeroSlider } from '../components/home/HeroSlider'
+import { CeoSection } from '../components/home/CeoSection'
 import { IntroSection } from '../components/home/IntroSection'
 import { RefinerySection } from '../components/home/RefinerySection'
 import { ProcessStory } from '../components/home/ProcessStory'
@@ -29,6 +30,7 @@ export default function HomePage() {
     <>
       <Seo title="" description={t(routes.home.description)} jsonLd={orgJsonLd} />
       <HeroSlider />
+      <CeoSection />
       <IntroSection />
       <RefinerySection />
       <ProcessStory />

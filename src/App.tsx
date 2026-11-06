@@ -15,6 +15,7 @@ const CareersPage = lazy(() => import('./pages/CareersPage'))
 const FaqPage = lazy(() => import('./pages/FaqPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const LegalPage = lazy(() => import('./pages/LegalPage'))
+const CeoPage = lazy(() => import('./pages/CeoPage'))
 const CreditsPage = lazy(() => import('./pages/CreditsPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 const AdminApp = lazy(() => import('./admin/AdminApp'))
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
       { path: path('faq'), element: <FaqPage /> },
       { path: path('contact'), element: <ContactPage /> },
       { path: path('legal'), element: <LegalPage /> },
+      { path: path('ceo'), element: <CeoPage /> },
       { path: path('credits'), element: <CreditsPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],

@@ -49,6 +49,19 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "source": "https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg"
   },
+  "ceo-jaimara-marques": {
+    "width": 1122,
+    "height": 1402,
+    "widths": [
+      640,
+      1122
+    ],
+    "author": "Fotografia oficial fornecida pela Refinaria",
+    "license": "Utilização institucional autorizada pelo cliente — validar antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "official": true
+  },
   "crucible-casting": {
     "width": 1920,
     "height": 1280,

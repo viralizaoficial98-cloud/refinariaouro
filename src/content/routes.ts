@@ -10,7 +10,7 @@ export type RouteKey =
   | 'home' | 'about' | 'history' | 'mission' | 'governance' | 'infrastructure'
   | 'process' | 'services' | 'quality' | 'sustainability' | 'hse' | 'ethics'
   | 'news' | 'gallery' | 'documents' | 'careers' | 'partners' | 'faq'
-  | 'contact' | 'legal' | 'credits'
+  | 'contact' | 'legal' | 'credits' | 'ceo'
 
 export interface RouteMeta {
   key: RouteKey
@@ -81,6 +81,9 @@ export const routes: Record<RouteKey, RouteMeta> = {
   legal: { key: 'legal', path: '/privacidade-e-termos', priority: 0.3,
     title: { pt: 'Política de Privacidade e Termos', en: 'Privacy Policy and Terms' },
     description: { pt: 'Política de privacidade, termos de utilização e cookies.', en: 'Privacy policy, terms of use and cookies.' } },
+  ceo: { key: 'ceo', path: '/lideranca/jaimara-marques', priority: 0.8,
+    title: { pt: 'Eng.ª Jaimara Marques — CEO', en: 'Eng. Jaimara Marques — CEO' },
+    description: { pt: 'Perfil executivo da Eng.ª Jaimara Marques, CEO da Refinaria de Ouro de Angola: biografia, percurso académico e experiência profissional.', en: 'Executive profile of Eng. Jaimara Marques, CEO of the Angola Gold Refinery: biography, education and professional experience.' } },
   credits: { key: 'credits', path: '/creditos-de-imagem', priority: 0.2,
     title: { pt: 'Créditos de Imagem', en: 'Image Credits' },
     description: { pt: 'Autoria, licenças e origem das fotografias utilizadas.', en: 'Authorship, licences and origin of the photographs used.' } },

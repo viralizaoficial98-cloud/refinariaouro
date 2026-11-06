@@ -9,13 +9,15 @@ export interface ImageMeta {
   licenseUrl?: string
   source: string
   client?: boolean
+  /** Fotografia oficial (não ilustrativa). */
+  official?: boolean
 }
 
 export const images = manifest as Record<string, ImageMeta>
 export const imageIds = Object.keys(images)
 
-/** Todas as fotografias actuais são ilustrativas (não retratam as instalações). */
-export const isIllustrative = (id: string) => id in images
+/** Fotografias ilustrativas: todas excepto as oficiais (ex.: retrato da CEO). */
+export const isIllustrative = (id: string) => id in images && !images[id].official
 
 export function srcSet(id: string, format: 'avif' | 'webp') {
   const m = images[id]

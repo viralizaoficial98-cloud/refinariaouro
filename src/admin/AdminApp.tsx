@@ -11,10 +11,11 @@ import { contactConfigured } from '../services/contact'
 import { FieldEditor } from './FieldEditor'
 import { Seo } from '../seo/Seo'
 
-type Section = 'dashboard' | 'slides' | 'news' | 'pages' | 'services' | 'documents' | 'gallery' | 'jobs' | 'faq' | 'contact' | 'menus' | 'media' | 'export'
+type Section = 'dashboard' | 'leadership' | 'slides' | 'news' | 'pages' | 'services' | 'documents' | 'gallery' | 'jobs' | 'faq' | 'contact' | 'menus' | 'media' | 'export'
 
 const sections: { key: Section; label: string }[] = [
   { key: 'dashboard', label: 'Painel' },
+  { key: 'leadership', label: 'Liderança (CEO)' },
   { key: 'slides', label: 'Slides do hero' },
   { key: 'news', label: 'Notícias' },
   { key: 'pages', label: 'Páginas e textos' },
@@ -164,10 +165,11 @@ export default function AdminApp() {
     ...content.services.filter((s) => s.status === 'a-confirmar').map((s) => `Serviço: ${s.title.pt}`),
     ...content.documents.filter((d) => d.status === 'a-confirmar').map((d) => `Documento: ${d.title.pt}`),
     ...content.news.filter((n) => n.sample).map((n) => `Notícia exemplificativa: ${n.title.pt}`),
+    ...(content.leadership.status === 'confirmado' ? [] : ['Liderança: nome, cargo e biografia da CEO']),
     ...(content.contact.phones.some((p) => p.status === 'confirmado') ? [] : ['Contactos: telefone oficial']),
     ...(content.contact.emails.some((p) => p.status === 'confirmado') ? [] : ['Contactos: e-mail oficial']),
     ...(content.contact.address.status === 'confirmado' ? [] : ['Contactos: morada e mapa']),
-    'Direitos de utilização das 3 imagens de referência do hero',
+    'Direitos de utilização das 3 imagens de referência do hero e do retrato da CEO',
   ]
 
   return (
@@ -222,6 +224,7 @@ export default function AdminApp() {
               </div>
             </div>
           )}
+          {section === 'leadership' && <ObjectEditor value={content.leadership} onSave={(v) => save('leadership', v)} />}
           {section === 'slides' && <CollectionEditor items={content.slides} title={(s) => s.title.pt} onSave={(v) => save('slides', v)} />}
           {section === 'news' && <CollectionEditor items={content.news} title={(n) => `${n.date} · ${n.title.pt}`} onSave={(v) => save('news', v)} />}
           {section === 'services' && <CollectionEditor items={content.services} title={(s) => `${s.status === 'confirmado' ? '✓' : '…'} ${s.title.pt}`} onSave={(v) => save('services', v)} />}

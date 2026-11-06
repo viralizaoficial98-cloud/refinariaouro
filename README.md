@@ -74,6 +74,11 @@ Recomenda-se uma versão vectorial (SVG) oficial quando disponível.
 
 ## Imagens e créditos
 
+- Retrato oficial da CEO (`ceo-jaimara-marques`): fotografia fornecida pela Refinaria; fundo substituído por branco
+  com recorte automático (modelo de segmentação de retratos), sem alteração do rosto, cores ou proporções.
+  Conteúdo do perfil em `src/content/leadership.ts` (editável no backoffice › Liderança); nome, cargo e biografia
+  marcados «a confirmar» até validação institucional.
+
 - Bandeiras do selector de idioma (`public/flags/pt.svg`, `public/flags/us.svg`): SVG oficiais de Portugal e dos
   Estados Unidos, do domínio público, obtidos da Wikimedia Commons e servidos localmente.
 
