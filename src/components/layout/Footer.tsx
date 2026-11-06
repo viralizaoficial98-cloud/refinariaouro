@@ -20,7 +20,7 @@ export function Footer() {
       <div className="mx-auto max-w-site px-5 pb-10 pt-20 sm:px-8 lg:px-12 lg:pt-28">
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo size="lg" />
+            <Logo size="lg" tone="dark" />
             <p className="mt-8 max-w-sm font-display text-2xl leading-snug text-ivory/85">{u('footerTagline')}</p>
             <div className="mt-10">
               <p className="text-[0.65rem] font-semibold uppercase tracking-eyebrow text-gold">{u('officialContacts')}</p>

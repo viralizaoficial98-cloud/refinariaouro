@@ -4,7 +4,7 @@ import { path } from './routes'
 export const brand = {
   name: { pt: 'Refinaria de Ouro de Angola', en: 'Angola Gold Refinery' } as L,
   group: 'Grupo ENDIAMA',
-  /** Logotipo oficial (original em assets-src/brand/logo-original.png). */
+  /** Logotipo oficial em PNG transparente (original em assets-src/brand/logo-transparent.png). */
   logoSrc: '/brand/logo.png',
 }
 

@@ -64,7 +64,7 @@ export function Header() {
         onKeyDown={(e) => { if (e.key === 'Escape') setOpen(null) }}
       >
         <div className="mx-auto flex max-w-site items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
-          <Logo size={scrolled ? 'sm' : 'md'} plate={!scrolled} />
+          <Logo size={scrolled ? 'sm' : 'md'} tone={scrolled ? 'light' : 'dark'} />
 
           <nav aria-label={t({ pt: 'Navegação principal', en: 'Main navigation' })} className="hidden min-[1360px]:block">
             <ul className="flex items-center">

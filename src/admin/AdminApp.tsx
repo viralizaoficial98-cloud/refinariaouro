@@ -181,7 +181,7 @@ export default function AdminApp() {
       <div className="flex">
         <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col bg-forest-900 text-ivory md:flex">
           <div className="px-6 py-6">
-            <img src="/brand/logo.png" alt="Refinaria de Ouro de Angola — Grupo ENDIAMA" className="h-16 w-auto bg-white p-2" />
+            <img src="/brand/logo.png" alt="Refinaria de Ouro de Angola — Grupo ENDIAMA" className="h-16 w-auto" style={{ filter: 'drop-shadow(0 0 0.35px rgba(255,255,255,0.7)) drop-shadow(0 0 8px rgba(255,255,255,0.28))' }} />
             <p className="mt-3 text-[0.6rem] uppercase tracking-[0.3em] text-gold">Backoffice</p>
           </div>
           <nav aria-label="Secções do backoffice" className="flex-1 overflow-y-auto">

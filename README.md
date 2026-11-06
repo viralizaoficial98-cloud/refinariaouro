@@ -65,12 +65,12 @@ clientes, parceiros nem números.
 
 ## Logotipo
 
-Logotipo oficial em `public/brand/logo.png` (+ `logo.webp`), obtido do original fornecido
-(`assets-src/brand/logo-original.png`) apenas com recorte das margens brancas — sem alteração de proporções nem
-cores. Como o original tem fundo branco, sobre fundos escuros (hero, rodapé, menu mobile) é apresentado numa placa
-branca. O favicon (`public/favicon.png`, `apple-touch-icon.png`) usa o emblema do logotipo.
-Caminho configurável em `src/content/site.ts` (`brand.logoSrc`). Para máxima nitidez, recomenda-se substituir por
-uma versão vectorial (SVG) oficial quando disponível.
+Logotipo oficial em PNG transparente: `public/brand/logo.png` (+ `logo.webp` com transparência), obtido do ficheiro
+fornecido (`assets-src/brand/logo-transparent.png`) apenas com recorte das margens vazias — sem alteração de
+proporções nem cores. Não há caixa nem placa por trás do logotipo. Sobre fundos escuros (hero, rodapé, menu mobile)
+o componente `Logo` com `tone="dark"` aplica apenas um halo luminoso muito suave (CSS `drop-shadow`) para
+legibilidade. O favicon usa o emblema transparente. Caminho configurável em `src/content/site.ts` (`brand.logoSrc`).
+Recomenda-se uma versão vectorial (SVG) oficial quando disponível.
 
 ## Imagens e créditos
 

@@ -31,7 +31,7 @@ export function MobileMenu({ open, onClose, onSearch }: { open: boolean; onClose
           transition={{ duration: 0.7, ease }}
         >
           <div className="flex items-center justify-between px-5 py-5 sm:px-8">
-            <Logo size="sm" />
+            <Logo size="sm" tone="dark" />
             <div className="flex items-center gap-6">
               <LangSwitch light />
               <button type="button" onClick={onClose} className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
