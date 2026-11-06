@@ -3,29 +3,22 @@ import { brand } from '../../content/site'
 import { useLang } from '../../i18n/LanguageContext'
 
 /**
- * Logotipo. Quando `brand.logoSrc` estiver definido, usa o ficheiro oficial sem
- * alterar proporções nem cores. Caso contrário, mostra uma assinatura tipográfica
- * provisória (não é o logotipo oficial).
+ * Logotipo oficial, usado sem alterar proporções nem cores (fundo branco original).
+ * Sobre fundos escuros é apresentado numa placa branca para manter o contraste.
  */
-export function Logo({ light = false, className = '' }: { light?: boolean; className?: string }) {
+export function Logo({ size = 'md', plate = true, className = '' }: { size?: 'sm' | 'md' | 'lg'; plate?: boolean; className?: string }) {
   const { t, lang } = useLang()
-  const src = light && brand.logoLightSrc ? brand.logoLightSrc : brand.logoSrc
+  const h = size === 'sm' ? 'h-11 sm:h-12' : size === 'lg' ? 'h-24 sm:h-28' : 'h-12 sm:h-[3.75rem]'
   return (
-    <Link to="/" className={`group inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${className}`} aria-label={`${t(brand.name)} — ${brand.group}, ${lang === 'pt' ? 'página inicial' : 'home page'}`}>
-      {src ? (
-        <img src={src} alt="" className="h-12 w-auto object-contain sm:h-14" />
-      ) : (
-        <span className="flex flex-col whitespace-nowrap leading-none">
-          <span className={`font-display text-[1.05rem] font-semibold uppercase tracking-[0.08em] sm:text-[1.3rem] 2xl:text-[1.4rem] ${light ? 'text-ivory' : 'text-forest'}`}>
-            {lang === 'pt' ? 'Refinaria de Ouro' : 'Angola Gold'}
-          </span>
-          <span className="mt-1 flex items-center gap-2 text-[0.5rem] sm:text-[0.56rem] font-semibold uppercase tracking-[0.34em] text-gold">
-            {lang === 'pt' ? 'de Angola' : 'Refinery'}
-            <span aria-hidden className="h-px w-4 bg-gold/60" />
-            <span className={light ? 'text-ivory/70' : 'text-charcoal-500'}>{brand.group}</span>
-          </span>
-        </span>
-      )}
+    <Link
+      to="/"
+      className={`group inline-flex shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 ${plate ? 'bg-white px-2.5 py-1.5 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.45)]' : ''} transition-[padding,box-shadow] duration-700 ease-lux ${className}`}
+      aria-label={`${t(brand.name)} — ${brand.group}, ${lang === 'pt' ? 'página inicial' : 'home page'}`}
+    >
+      <picture>
+        <source type="image/webp" srcSet={brand.logoSrc.replace(/\.png$/, '.webp')} />
+        <img src={brand.logoSrc} alt="" width={693} height={410} className={`${h} w-auto transition-[height] duration-700 ease-lux`} />
+      </picture>
     </Link>
   )
 }

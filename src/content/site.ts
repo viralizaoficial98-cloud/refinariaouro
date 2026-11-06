@@ -4,12 +4,8 @@ import { path } from './routes'
 export const brand = {
   name: { pt: 'Refinaria de Ouro de Angola', en: 'Angola Gold Refinery' } as L,
   group: 'Grupo ENDIAMA',
-  /**
-   * Caminho do logotipo oficial (ex.: '/brand/logo.svg'). Enquanto vazio, o site
-   * apresenta uma assinatura tipográfica provisória — não é o logotipo oficial.
-   */
-  logoSrc: '',
-  logoLightSrc: '',
+  /** Logotipo oficial (original em assets-src/brand/logo-original.png). */
+  logoSrc: '/brand/logo.png',
 }
 
 export const initialSlides: Slide[] = [

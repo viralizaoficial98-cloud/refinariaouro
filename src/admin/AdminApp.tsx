@@ -46,6 +46,7 @@ function Login({ onDemo, onLogged }: { onDemo: () => void; onLogged: (u: AdminUs
   return (
     <div className="flex min-h-screen items-center justify-center bg-forest-900 p-6">
       <div className="w-full max-w-md bg-ivory p-10">
+        <img src="/brand/logo.png" alt="Refinaria de Ouro de Angola — Grupo ENDIAMA" className="mx-auto mb-8 h-24 w-auto" />
         <p className="text-[0.65rem] font-semibold uppercase tracking-eyebrow text-gold-deep">Backoffice</p>
         <h1 className="mt-3 font-display text-4xl text-forest">Gestão de conteúdos</h1>
         {apiConfigured ? (
@@ -166,7 +167,6 @@ export default function AdminApp() {
     ...(content.contact.phones.some((p) => p.status === 'confirmado') ? [] : ['Contactos: telefone oficial']),
     ...(content.contact.emails.some((p) => p.status === 'confirmado') ? [] : ['Contactos: e-mail oficial']),
     ...(content.contact.address.status === 'confirmado' ? [] : ['Contactos: morada e mapa']),
-    'Logotipo oficial (src/content/site.ts → brand.logoSrc)',
     'Direitos de utilização das 3 imagens de referência do hero',
   ]
 
@@ -181,8 +181,8 @@ export default function AdminApp() {
       <div className="flex">
         <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col bg-forest-900 text-ivory md:flex">
           <div className="px-6 py-6">
-            <p className="font-display text-xl">Refinaria de Ouro</p>
-            <p className="text-[0.6rem] uppercase tracking-[0.3em] text-gold">Backoffice</p>
+            <img src="/brand/logo.png" alt="Refinaria de Ouro de Angola — Grupo ENDIAMA" className="h-16 w-auto bg-white p-2" />
+            <p className="mt-3 text-[0.6rem] uppercase tracking-[0.3em] text-gold">Backoffice</p>
           </div>
           <nav aria-label="Secções do backoffice" className="flex-1 overflow-y-auto">
             {sections.map((s) => (

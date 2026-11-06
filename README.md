@@ -65,11 +65,12 @@ clientes, parceiros nem números.
 
 ## Logotipo
 
-Não foi recebido nenhum ficheiro de logotipo. Enquanto não existir, o site mostra uma **assinatura tipográfica
-provisória** (não é o logotipo oficial). Para usar o oficial:
-1. colocar o ficheiro em `public/brand/logo.svg` (e uma versão clara para fundos escuros, se existir);
-2. definir `brand.logoSrc` / `brand.logoLightSrc` em `src/content/site.ts`.
-O componente `Logo` usa a imagem sem alterar proporções nem cores.
+Logotipo oficial em `public/brand/logo.png` (+ `logo.webp`), obtido do original fornecido
+(`assets-src/brand/logo-original.png`) apenas com recorte das margens brancas — sem alteração de proporções nem
+cores. Como o original tem fundo branco, sobre fundos escuros (hero, rodapé, menu mobile) é apresentado numa placa
+branca. O favicon (`public/favicon.png`, `apple-touch-icon.png`) usa o emblema do logotipo.
+Caminho configurável em `src/content/site.ts` (`brand.logoSrc`). Para máxima nitidez, recomenda-se substituir por
+uma versão vectorial (SVG) oficial quando disponível.
 
 ## Imagens e créditos
 
@@ -97,7 +98,7 @@ encaminhar todas as rotas para `index.html`.
 
 ## Pendências para publicação oficial
 
-- Logotipo oficial e direitos das imagens do hero.
+- Versão vectorial (SVG) do logotipo e direitos das imagens do hero.
 - Contactos oficiais (telefone, e-mail, morada, mapa) → backoffice › Contactos, estado «confirmado».
 - Endpoint do formulário (`VITE_CONTACT_ENDPOINT`) com validação e anti-spam no servidor (rate limit, CAPTCHA).
 - Backend do CMS (`VITE_API_BASE_URL`) com autenticação segura.

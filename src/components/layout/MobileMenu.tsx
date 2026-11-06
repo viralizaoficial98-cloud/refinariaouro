@@ -6,6 +6,7 @@ import { path } from '../../content/routes'
 import { useLang } from '../../i18n/LanguageContext'
 import { useDialog } from '../../hooks/useDialog'
 import { LangSwitch } from './Header'
+import { Logo } from './Logo'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -30,7 +31,7 @@ export function MobileMenu({ open, onClose, onSearch }: { open: boolean; onClose
           transition={{ duration: 0.7, ease }}
         >
           <div className="flex items-center justify-between px-5 py-5 sm:px-8">
-            <span className="font-display text-xl uppercase tracking-[0.1em] text-ivory">{u('menu')}</span>
+            <Logo size="sm" />
             <div className="flex items-center gap-6">
               <LangSwitch light />
               <button type="button" onClick={onClose} className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
