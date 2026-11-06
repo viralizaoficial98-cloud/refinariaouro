@@ -1,0 +1,19 @@
+{
+  "hero-molten-pour": { "author": "Fornecida pelo cliente", "license": "Referência visual fornecida pelo cliente — confirmar direitos de utilização antes da publicação", "source": "", "client": true },
+  "hero-bars-macro": { "author": "Fornecida pelo cliente", "license": "Referência visual fornecida pelo cliente — confirmar direitos de utilização antes da publicação", "source": "", "client": true },
+  "hero-refining-hall": { "author": "Fornecida pelo cliente", "license": "Referência visual fornecida pelo cliente — confirmar direitos de utilização antes da publicação", "source": "", "client": true },
+  "fire-assay-furnace": { "author": "SoporteMinares", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": "https://commons.wikimedia.org/wiki/File:Fire_assay.jpg" },
+  "bullion-stack": { "author": "Stevebidmead", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg" },
+  "ingot-display": { "author": "Laci3", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "https://commons.wikimedia.org/wiki/File:Lingote_de_oro_-_Feldioara.jpg" },
+  "induction-melting": { "author": "PowderBN", "license": "CC BY 4.0", "licenseUrl": "https://creativecommons.org/licenses/by/4.0/", "source": "https://commons.wikimedia.org/wiki/File:Melting_of_metal_with_an_induction_heating_furnace.jpg" },
+  "crucible-casting": { "author": "Kriero", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": "https://commons.wikimedia.org/wiki/File:%D0%9E%D1%82%D0%BB%D0%B8%D0%B2%D0%BA%D0%B0_%D1%81%D0%BB%D0%B8%D1%82%D0%BA%D0%B0_%D0%B8%D0%B7_%D0%B7%D0%BE%D0%BB%D0%BE%D1%82%D0%B0.jpg" },
+  "nugget-quartz": { "author": "Bryan Barnes", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": "https://commons.wikimedia.org/wiki/File:AZ_Gold_Nugget_Quartz.jpg" },
+  "laboratory-team": { "author": "Esculab", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "https://commons.wikimedia.org/wiki/File:A_group_of_scientists_working_in_a_laboratory_Esculab.jpg" },
+  "luanda-bay": { "author": "Paulo César Santos", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "https://commons.wikimedia.org/wiki/File:Bay_of_Luanda.jpg" },
+  "gold-nugget": { "author": "Cephas", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/", "source": "https://commons.wikimedia.org/wiki/File:Gold_nugget_2.jpg" },
+  "luanda-city": { "author": "Lars Rohwer", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/", "source": "https://commons.wikimedia.org/wiki/File:Luanda_feb09_ost01.jpg" },
+  "archive-assay": { "author": "U.S. National Archives (NARA 296603)", "license": "Domínio público", "source": "https://commons.wikimedia.org/wiki/File:Photograph_of_refinery_process_of_testing_gold_-_NARA_-_296603.jpg" },
+  "archive-refinery": { "author": "U.S. National Archives (NARA 296604)", "license": "Domínio público", "source": "https://commons.wikimedia.org/wiki/File:Photograph_of_treating_gold_in_the_refinery_-_NARA_-_296604.jpg" },
+  "archive-laboratory": { "author": "State Government Photographer", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "https://commons.wikimedia.org/wiki/File:Scientist_Working_in_a_Laboratory(GN09043).jpg" },
+  "laboratory-analyst": { "author": "Esculab", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "https://commons.wikimedia.org/wiki/File:Scientist_in_a_laboratory_Esculab.jpg" }
+}
