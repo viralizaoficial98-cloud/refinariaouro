@@ -74,6 +74,9 @@ Recomenda-se uma versão vectorial (SVG) oficial quando disponível.
 
 ## Imagens e créditos
 
+- Bandeiras do selector de idioma (`public/flags/pt.svg`, `public/flags/us.svg`): SVG oficiais de Portugal e dos
+  Estados Unidos, do domínio público, obtidos da Wikimedia Commons e servidos localmente.
+
 - 3 imagens do hero (`hero-*`): referências visuais fornecidas pelo cliente — **confirmar direitos de utilização antes da publicação**.
 - Restantes: Wikimedia Commons (CC0, domínio público, CC BY, CC BY-SA), com autor, licença e origem em
   `scripts/image-sources.json` e na página pública `/creditos-de-imagem`.
@@ -87,6 +90,7 @@ Recomenda-se uma versão vectorial (SVG) oficial quando disponível.
 - `sitemap.xml` e `robots.txt` gerados no build a partir de `src/content/routes.ts` (`/admin` excluído).
 - Imagens AVIF/WebP em 640/1280/1920 px com `srcset`, lazy loading e dimensões intrínsecas; hero pré-carregado.
 - Code splitting por rota; tipos de letra locais (@fontsource).
+- Selector de idioma PT/EN com bandeiras; a escolha persiste entre páginas e após recarregar (`localStorage`, `?lang=`).
 - `prefers-reduced-motion` respeitado (sem Ken Burns, parallax nem autoplay), navegação por teclado,
   foco visível, skip link, diálogos com focus trap, hero com pausa/retoma e setas do teclado.
 - SPA: para indexação mais robusta considerar pré-renderização (ex.: `vite-react-ssg`) numa fase seguinte.

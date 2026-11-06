@@ -8,24 +8,47 @@ import { Logo } from './Logo'
 import { MobileMenu } from './MobileMenu'
 import { SearchOverlay } from './SearchOverlay'
 
+const languages = [
+  { code: 'pt', label: 'PT', name: 'Português', flag: '/flags/pt.svg' },
+  { code: 'en', label: 'EN', name: 'English', flag: '/flags/us.svg' },
+] as const
+
+/** Selector de idioma com bandeiras SVG locais (Portugal / Estados Unidos). */
 export function LangSwitch({ light }: { light: boolean }) {
   const { lang, setLang, u } = useLang()
   return (
-    <div role="group" aria-label={u('language')} className="flex items-center gap-1 text-[0.7rem] font-semibold tracking-[0.2em]">
-      {(['pt', 'en'] as const).map((l, i) => (
-        <span key={l} className="flex items-center">
-          {i > 0 && <span aria-hidden className={`mx-1 ${light ? 'text-ivory/40' : 'text-charcoal/30'}`}>/</span>}
-          <button
-            type="button"
-            onClick={() => setLang(l)}
-            aria-pressed={lang === l}
-            lang={l}
-            className={`px-1 py-1 uppercase transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${lang === l ? 'text-gold' : light ? 'text-ivory/70 hover:text-ivory' : 'text-charcoal-500 hover:text-forest'}`}
-          >
-            {l}
-          </button>
-        </span>
-      ))}
+    <div role="group" aria-label={u('language')} className="flex items-center gap-0.5 text-[0.7rem] font-semibold tracking-[0.18em]">
+      {languages.map((l, i) => {
+        const active = lang === l.code
+        return (
+          <span key={l.code} className="flex items-center">
+            {i > 0 && <span aria-hidden className={`mx-1 h-3 w-px ${light ? 'bg-ivory/30' : 'bg-charcoal/20'}`} />}
+            <button
+              type="button"
+              onClick={() => setLang(l.code)}
+              aria-pressed={active}
+              aria-label={l.name}
+              title={l.name}
+              lang={l.code}
+              className={`group relative flex min-h-[2.25rem] items-center gap-1.5 px-1.5 py-1 uppercase transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                active ? 'text-gold' : light ? 'text-ivory/70 hover:text-ivory' : 'text-charcoal-500 hover:text-forest'
+              }`}
+            >
+              <img
+                src={l.flag}
+                alt=""
+                width={20}
+                height={14}
+                className={`h-[14px] w-[20px] shrink-0 rounded-[2px] object-cover object-left transition-[opacity,filter,box-shadow] duration-300 ${
+                  active ? 'opacity-100 shadow-[0_0_0_1px_#D4AF37]' : `opacity-70 saturate-[0.85] group-hover:opacity-100 group-hover:saturate-100 ${light ? 'shadow-[0_0_0_1px_rgba(248,247,242,0.25)]' : 'shadow-[0_0_0_1px_rgba(22,27,24,0.12)]'}`
+                }`}
+              />
+              <span aria-hidden>{l.label}</span>
+              <span aria-hidden className={`absolute inset-x-1.5 bottom-0.5 h-px origin-left bg-gold transition-transform duration-500 ease-lux ${active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-50'}`} />
+            </button>
+          </span>
+        )
+      })}
     </div>
   )
 }
