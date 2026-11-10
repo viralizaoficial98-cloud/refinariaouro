@@ -86,7 +86,7 @@ export function HeroSlider() {
       ref={ref}
       aria-roledescription="carousel"
       aria-label={t({ pt: 'Destaques', en: 'Highlights' })}
-      className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-charcoal text-ivory"
+      className="relative min-h-[100svh] w-full overflow-hidden bg-charcoal text-ivory"
       style={{ touchAction: 'pan-y' }}
       onKeyDown={onKey}
       onMouseEnter={() => setHovered(true)}
@@ -129,7 +129,7 @@ export function HeroSlider() {
       <div aria-hidden className="pointer-events-none absolute inset-0 z-[3] bg-forest-900/20 mix-blend-multiply" />
 
       {/* Texto */}
-      <div className="relative z-[4] mx-auto flex h-full max-w-site flex-col justify-center px-5 pb-36 pt-28 sm:px-8 lg:px-12 lg:pb-40">
+      <div className="relative z-[4] mx-auto flex min-h-[100svh] max-w-site flex-col justify-center px-5 pb-32 pt-32 sm:px-8 sm:pt-40 lg:px-12 lg:pb-40 lg:pt-44 [@media(max-height:820px)]:pb-28">
         <div aria-live={paused ? 'polite' : 'off'} className="max-w-[56rem]">
           <AnimatePresence mode="wait">
             <motion.div key={slide.id} initial="hidden" animate="visible" exit="exit">
@@ -140,7 +140,7 @@ export function HeroSlider() {
                 <span aria-hidden className="h-px w-12 bg-gold" />
                 {t(slide.eyebrow)}
               </motion.p>
-              <h1 className="mt-6 font-display text-[2.7rem] font-medium leading-[1.02] tracking-[-0.015em] text-ivory sm:text-6xl lg:text-[5.6rem] xl:text-[6.2rem]">
+              <h1 className="mt-6 font-display text-[2.4rem] font-medium leading-[1.02] tracking-[-0.015em] text-ivory min-[400px]:text-[2.7rem] sm:text-6xl lg:text-[5.6rem] xl:text-[6.2rem] [@media(min-width:640px)_and_(max-height:820px)]:text-[3.4rem] [@media(min-width:1024px)_and_(max-height:820px)]:text-[4.4rem] [@media(max-height:820px)]:mt-4">
                 {words.map((w, wi) => (
                   <span key={wi} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
                     <motion.span
@@ -158,13 +158,13 @@ export function HeroSlider() {
               </h1>
               <motion.p
                 variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease, delay: 0.75 } }, exit: { opacity: 0, transition: { duration: 0.35 } } }}
-                className="mt-7 max-w-2xl text-base leading-relaxed text-ivory/85 sm:text-lg lg:text-xl"
+                className="mt-7 max-w-2xl text-base leading-relaxed text-ivory/85 sm:text-lg lg:text-xl [@media(max-height:820px)]:mt-5 [@media(max-height:820px)]:lg:text-lg"
               >
                 {t(slide.subtitle)}
               </motion.p>
               <motion.div
                 variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease, delay: 0.95 } }, exit: { opacity: 0, transition: { duration: 0.3 } } }}
-                className="mt-10 flex flex-wrap items-center gap-6"
+                className="mt-10 flex flex-wrap items-center gap-6 [@media(max-height:820px)]:mt-7"
               >
                 <Link to={slide.cta.to} className="group relative inline-flex items-center gap-3 overflow-hidden bg-gold px-7 py-4 text-[0.74rem] font-semibold uppercase tracking-[0.2em] text-charcoal transition-colors duration-500 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-light focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal">
                   <span aria-hidden className="absolute inset-0 origin-left scale-x-0 bg-forest transition-transform duration-500 ease-lux group-hover:scale-x-100" />
