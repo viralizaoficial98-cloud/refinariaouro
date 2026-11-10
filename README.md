@@ -95,7 +95,7 @@ Versão anterior recuperável pela tag git `pre-brochura-v1`.
 
 ## Imagens e créditos
 
-- Retrato oficial do CEO (`ceo-domingos-kimba-baptista`): fotografia fornecida pela Refinaria, usada sem
+- Retrato oficial do Director Geral (`ceo-domingos-kimba-baptista`): fotografia fornecida pela Refinaria, usada sem
   alterações (apenas optimizada para web). Perfil em `src/content/leadership.ts` (backoffice › Liderança): só nome,
   cargo e texto institucional proposto — formação e percurso não são apresentados por não terem sido verificados
   (o perfil LinkedIn indicado não pôde ser consultado). Endereço `/lideranca/domingos-kimba-baptista`; endereços

@@ -17,12 +17,12 @@ export interface LeaderProfile {
 }
 
 /**
- * Perfil do CEO — conteúdo fornecido pela Refinaria. Não acrescentar formação, cargos
+ * Perfil do Director Geral — conteúdo fornecido pela Refinaria. Não acrescentar formação, cargos
  * anteriores, certificações, datas, declarações ou outros dados biográficos não verificados.
  */
 export const initialLeadership: LeaderProfile = {
   name: 'Domingos Kimba Baptista',
-  role: { pt: 'CEO — Refinaria de Ouro de Angola', en: 'CEO — Angola Gold Refinery' },
+  role: { pt: 'Director Geral — Refinaria de Ouro de Angola', en: 'Director General — Angola Gold Refinery' },
   headline: { pt: 'Liderança Executiva', en: 'Executive Leadership' },
   subtitle: { pt: 'Domingos Kimba Baptista | Liderança Executiva', en: 'Domingos Kimba Baptista | Executive Leadership' },
   image: 'ceo-domingos-kimba-baptista',

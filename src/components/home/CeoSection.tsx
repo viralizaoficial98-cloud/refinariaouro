@@ -7,7 +7,7 @@ import { Picture } from '../ui/Picture'
 import { MaskReveal, Reveal } from '../ui/Reveal'
 import { ButtonLink, Container, Eyebrow } from '../ui/Typography'
 
-/** Apresentação do CEO (Liderança Executiva) — primeira secção após o slideshow. */
+/** Apresentação do Director Geral (Liderança Executiva) — primeira secção após o slideshow. */
 export function CeoSection() {
   const { t } = useLang()
   const { content } = useContent()
@@ -58,7 +58,7 @@ export function CeoSection() {
             ))}
           </div>
           <Reveal delay={0.5} className="mt-12 flex flex-wrap items-center gap-8">
-            <ButtonLink to={path('ceo')}>{t({ pt: 'Conhecer o CEO', en: 'Meet the CEO' })}</ButtonLink>
+            <ButtonLink to={path('ceo')}>{t({ pt: 'Conhecer o Director Geral', en: 'Meet the Director General' })}</ButtonLink>
           </Reveal>
         </div>
       </Container>

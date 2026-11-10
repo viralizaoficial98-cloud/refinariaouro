@@ -16,7 +16,7 @@ export default function CeoPage() {
   return (
     <>
       <Seo title={t(r.title)} description={t(r.description)} image={c.image}
-        jsonLd={{ '@context': 'https://schema.org', '@type': 'Person', name: c.name, jobTitle: 'CEO', worksFor: { '@type': 'Organization', name: 'Refinaria de Ouro de Angola' }, ...(c.education.length ? { alumniOf: c.education.map((e) => ({ '@type': 'CollegeOrUniversity', name: e.institution })) } : {}) }} />
+        jsonLd={{ '@context': 'https://schema.org', '@type': 'Person', name: c.name, jobTitle: 'Director Geral', worksFor: { '@type': 'Organization', name: 'Refinaria de Ouro de Angola' }, ...(c.education.length ? { alumniOf: c.education.map((e) => ({ '@type': 'CollegeOrUniversity', name: e.institution })) } : {}) }} />
 
       {/* Cabeçalho do perfil */}
       <section className="relative overflow-hidden bg-forest-900 pb-20 pt-36 text-ivory sm:pt-40 lg:pb-28 lg:pt-48">

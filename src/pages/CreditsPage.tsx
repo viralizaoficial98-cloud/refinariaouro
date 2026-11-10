@@ -15,7 +15,7 @@ export default function CreditsPage() {
       <PageHero compact eyebrow={t(r.title)} title={t(r.title)} image="archive-assay" crumbs={[{ label: t(r.title) }]} />
       <section className="bg-white py-16 sm:py-24">
         <Container>
-          <PendingNote className="max-w-3xl">{t({ pt: 'As fotografias deste portal são ilustrativas e não retratam as instalações da Refinaria de Ouro de Angola, com excepção do retrato oficial do CEO. Abaixo indicam-se autoria, licença e origem.', en: 'Photographs on this portal are illustrative and do not depict the Angola Gold Refinery’s facilities, except for the CEO’s official portrait. Authorship, licence and source are listed below.' })}</PendingNote>
+          <PendingNote className="max-w-3xl">{t({ pt: 'As fotografias deste portal são ilustrativas e não retratam as instalações da Refinaria de Ouro de Angola, com excepção do retrato oficial do Director Geral. Abaixo indicam-se autoria, licença e origem.', en: 'Photographs on this portal are illustrative and do not depict the Angola Gold Refinery’s facilities, except for the Director General’s official portrait. Authorship, licence and source are listed below.' })}</PendingNote>
           <ul className="mt-12 grid gap-px bg-ivory-300 sm:grid-cols-2 lg:grid-cols-3">
             {Object.entries(images).map(([id, m]) => (
               <li key={id} className="flex gap-5 bg-white p-5">
