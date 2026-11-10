@@ -99,13 +99,6 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "source": "https://commons.wikimedia.org/wiki/File:Scientist_in_a_laboratory_Esculab.jpg"
   },
-  "ceo-jaimara-marques": {
-    "author": "Fotografia oficial fornecida pela Refinaria",
-    "license": "Utilização institucional autorizada pelo cliente — validar antes da publicação definitiva",
-    "source": "",
-    "client": true,
-    "official": true
-  },
   "brochure-cover-refinery": {
     "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 1)",
     "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
@@ -203,5 +196,12 @@
     "source": "",
     "client": true,
     "brochure": true
+  },
+  "ceo-domingos-kimba-baptista": {
+    "author": "Fotografia oficial fornecida pela Refinaria",
+    "license": "Utilização institucional autorizada pelo cliente — validar antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "official": true
   }
 }

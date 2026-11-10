@@ -7,7 +7,7 @@ import { Picture } from '../ui/Picture'
 import { MaskReveal, Reveal } from '../ui/Reveal'
 import { ButtonLink, Container, Eyebrow } from '../ui/Typography'
 
-/** Apresentação da CEO — primeira secção após o slideshow. */
+/** Apresentação do CEO (Liderança Executiva) — primeira secção após o slideshow. */
 export function CeoSection() {
   const { t } = useLang()
   const { content } = useContent()
@@ -43,11 +43,13 @@ export function CeoSection() {
 
         {/* Texto */}
         <div className="pt-6 lg:col-span-6 lg:col-start-7 lg:pt-0">
-          <Reveal><Eyebrow>{t({ pt: 'Liderança Executiva', en: 'Executive Leadership' })}</Eyebrow></Reveal>
+          <Reveal><Eyebrow>{t({ pt: 'Direcção Executiva', en: 'Executive Management' })}</Eyebrow></Reveal>
           <Reveal delay={0.1}>
             <h2 id="ceo-title" className="mt-8 font-display text-4xl font-medium leading-[1.08] text-forest text-balance sm:text-5xl lg:text-[3.3rem]">{t(c.headline)}</h2>
           </Reveal>
-          <Reveal delay={0.18}><p className="mt-6 text-[0.74rem] font-semibold uppercase tracking-[0.22em] text-gold-deep">{t(c.subtitle)}</p></Reveal>
+          <Reveal delay={0.16}><p className="mt-8 font-display text-3xl leading-tight text-gold-deep sm:text-4xl">{c.name}</p></Reveal>
+          <Reveal delay={0.2}><p className="mt-3 text-[0.74rem] font-semibold uppercase tracking-[0.22em] text-charcoal-500">{t(c.role)}</p></Reveal>
+          <Reveal delay={0.22}><span aria-hidden className="mt-8 block h-px w-16 bg-gold" /></Reveal>
           <div className="mt-8 space-y-5">
             {c.bio.slice(0, 3).map((p, i) => (
               <Reveal key={i} delay={0.24 + i * 0.08}>
@@ -56,7 +58,7 @@ export function CeoSection() {
             ))}
           </div>
           <Reveal delay={0.5} className="mt-12 flex flex-wrap items-center gap-8">
-            <ButtonLink to={path('ceo')}>{t({ pt: 'Conhecer a CEO', en: 'Meet the CEO' })}</ButtonLink>
+            <ButtonLink to={path('ceo')}>{t({ pt: 'Conhecer o CEO', en: 'Meet the CEO' })}</ButtonLink>
           </Reveal>
         </div>
       </Container>

@@ -95,10 +95,11 @@ Versão anterior recuperável pela tag git `pre-brochura-v1`.
 
 ## Imagens e créditos
 
-- Retrato oficial da CEO (`ceo-jaimara-marques`): fotografia fornecida pela Refinaria; fundo substituído por branco
-  com recorte automático (modelo de segmentação de retratos), sem alteração do rosto, cores ou proporções.
-  Conteúdo do perfil em `src/content/leadership.ts` (editável no backoffice › Liderança); nome, cargo e biografia
-  marcados «a confirmar» até validação institucional.
+- Retrato oficial do CEO (`ceo-domingos-kimba-baptista`): fotografia fornecida pela Refinaria, usada sem
+  alterações (apenas optimizada para web). Perfil em `src/content/leadership.ts` (backoffice › Liderança): só nome,
+  cargo e texto institucional proposto — formação e percurso não são apresentados por não terem sido verificados
+  (o perfil LinkedIn indicado não pôde ser consultado). Endereço `/lideranca/domingos-kimba-baptista`; endereços
+  antigos em `/lideranca/*` redireccionam para ele.
 
 - Bandeiras do selector de idioma (`public/flags/pt.svg`, `public/flags/us.svg`): SVG oficiais de Portugal e dos
   Estados Unidos, do domínio público, obtidos da Wikimedia Commons e servidos localmente.

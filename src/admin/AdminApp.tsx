@@ -166,7 +166,7 @@ export default function AdminApp() {
     ...content.services.filter((s) => s.status === 'a-confirmar').map((s) => `Serviço: ${s.title.pt}`),
     ...content.documents.filter((d) => d.status === 'a-confirmar').map((d) => `Documento: ${d.title.pt}`),
     ...content.news.filter((n) => n.sample).map((n) => `Notícia exemplificativa: ${n.title.pt}`),
-    ...(content.leadership.status === 'confirmado' ? [] : ['Liderança: nome, cargo e biografia da CEO']),
+    ...(content.leadership.status === 'confirmado' ? [] : ['Liderança: nome, cargo e texto institucional do CEO (proposta editorial)']),
     ...(content.contact.phones.some((p) => p.status === 'confirmado') ? [] : ['Contactos: telefone (brochura indica «900 000 000» — confirmar se é o número real)']),
     ...(content.contact.emails.some((p) => p.status === 'confirmado') ? [] : ['Contactos: e-mail geral@roa.co.ao (brochura)']),
     ...(content.contact.website?.status === 'confirmado' ? [] : ['Contactos: website www.roa.co.ao (brochura)']),
@@ -175,7 +175,7 @@ export default function AdminApp() {
     ...(content.brochure.contrastaria.status === 'confirmado' ? [] : ['Brochura: contrastaria, certificados de origem/pureza e marcação oficial (validação regulamentar)']),
     'Brochura: alegação «primeira unidade do género no país»',
     'Direitos de utilização das 14 fotografias extraídas da brochura institucional',
-    'Direitos de utilização das 3 imagens de referência do hero e do retrato da CEO',
+    'Direitos de utilização das 3 imagens de referência do hero e do retrato do CEO',
   ]
 
   return (

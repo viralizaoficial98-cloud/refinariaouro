@@ -18,7 +18,7 @@ export interface ImageMeta {
 export const images = manifest as Record<string, ImageMeta>
 export const imageIds = Object.keys(images)
 
-/** Fotografias ilustrativas: todas excepto as oficiais (ex.: retrato da CEO). */
+/** Fotografias ilustrativas: todas excepto as oficiais (ex.: retrato do CEO). */
 export const isIllustrative = (id: string) => id in images && !images[id].official && !images[id].brochure
 export const isBrochure = (id: string) => !!images[id]?.brochure
 

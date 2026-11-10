@@ -66,7 +66,7 @@ export function ButtonLink({ to, children, variant = 'gold', className = '' }: {
 /**
  * Indicação discreta da origem da fotografia: «Imagem ilustrativa» (não corresponde às instalações)
  * ou «Brochura institucional» quando a imagem foi extraída da brochura da Refinaria.
- * Fotografias oficiais (ex.: retrato da CEO) não recebem indicação.
+ * Fotografias oficiais (ex.: retrato do CEO) não recebem indicação.
  */
 export function IllustrativeTag({ className = '', light = true, id }: { className?: string; light?: boolean; id?: string }) {
   const { u } = useLang()

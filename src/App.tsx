@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { Layout } from './components/layout/Layout'
 import { path } from './content/routes'
 import HomePage from './pages/HomePage'
@@ -42,6 +42,8 @@ const router = createBrowserRouter([
       { path: path('contact'), element: <ContactPage /> },
       { path: path('legal'), element: <LegalPage /> },
       { path: path('ceo'), element: <CeoPage /> },
+      /* Endereço antigo do perfil executivo: redirecciona para a liderança actual. */
+      { path: '/lideranca/:anterior', element: <Navigate to={path('ceo')} replace /> },
       { path: path('valueChain'), element: <ValueChainPage /> },
       { path: path('technologies'), element: <TechnologiesPage /> },
       { path: path('contrastaria'), element: <ContrastariaPage /> },

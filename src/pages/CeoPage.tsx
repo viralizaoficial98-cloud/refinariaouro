@@ -16,7 +16,7 @@ export default function CeoPage() {
   return (
     <>
       <Seo title={t(r.title)} description={t(r.description)} image={c.image}
-        jsonLd={{ '@context': 'https://schema.org', '@type': 'Person', name: 'Jaimara Marques', jobTitle: 'CEO', worksFor: { '@type': 'Organization', name: 'Refinaria de Ouro de Angola' }, alumniOf: c.education.map((e) => ({ '@type': 'CollegeOrUniversity', name: e.institution })) }} />
+        jsonLd={{ '@context': 'https://schema.org', '@type': 'Person', name: c.name, jobTitle: 'CEO', worksFor: { '@type': 'Organization', name: 'Refinaria de Ouro de Angola' }, ...(c.education.length ? { alumniOf: c.education.map((e) => ({ '@type': 'CollegeOrUniversity', name: e.institution })) } : {}) }} />
 
       {/* Cabeçalho do perfil */}
       <section className="relative overflow-hidden bg-forest-900 pb-20 pt-36 text-ivory sm:pt-40 lg:pb-28 lg:pt-48">
@@ -63,7 +63,8 @@ export default function CeoPage() {
         </Container>
       </section>
 
-      {/* Percurso académico e experiência */}
+      {/* Percurso académico e experiência — só apresentados quando existem dados verificados */}
+      {(c.education.length > 0 || c.experience.institutions.length > 0) && (
       <section className="bg-white py-20 sm:py-28">
         <Container className="grid gap-16 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -102,11 +103,12 @@ export default function CeoPage() {
           </div>
         </Container>
       </section>
+      )}
 
       <section className="bg-ivory pb-20 pt-4">
         <Container className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           {c.status === 'a-confirmar' && (
-            <PendingNote className="max-w-2xl">{t({ pt: 'Nome, cargo e informação biográfica fornecidos pela Refinaria, sujeitos a validação institucional antes da publicação definitiva.', en: 'Name, position and biographical information provided by the Refinery, subject to institutional validation before final publication.' })}</PendingNote>
+            <PendingNote className="max-w-2xl">{t({ pt: 'Nome e cargo indicados pela Refinaria. O texto apresentado é uma proposta editorial institucional (não constitui declaração pessoal) e está sujeito a aprovação antes da publicação definitiva.', en: 'Name and position as indicated by the Refinery. The text shown is an institutional editorial proposal (not a personal statement) and is subject to approval before final publication.' })}</PendingNote>
           )}
           <ButtonLink to={path('about')} variant="outline">{t({ pt: 'Conhecer a Refinaria', en: 'Discover the Refinery' })}</ButtonLink>
         </Container>
