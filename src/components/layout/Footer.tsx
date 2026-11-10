@@ -4,14 +4,15 @@ import { path } from '../../content/routes'
 import { useContent } from '../../content/ContentContext'
 import { useLang } from '../../i18n/LanguageContext'
 import { Logo } from './Logo'
+import { telHref, visibleContacts, webHref } from '../ui/ContactDetails'
 
 export function Footer() {
   const { t, u } = useLang()
   const { content } = useContent()
   const c = content.contact
-  const phones = c.phones.filter((p) => p.status === 'confirmado' && p.value)
-  const emails = c.emails.filter((e) => e.status === 'confirmado' && e.value)
-  const address = c.address.status === 'confirmado' ? t(c.address.value) : ''
+  const { phones, emails, website, hasAddress, pending } = visibleContacts(c)
+  const address = hasAddress ? t(c.address.value) : ''
+  const tagline = content.brochure.tagline
   const year = new Date().getFullYear()
 
   return (
@@ -22,13 +23,16 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo size="lg" tone="dark" />
             <p className="mt-8 max-w-sm font-display text-2xl leading-snug text-ivory/85">{u('footerTagline')}</p>
+            <p className="mt-5 max-w-sm text-[0.62rem] font-semibold uppercase tracking-[0.24em] text-gold-light/80">{t(tagline)}</p>
             <div className="mt-10">
               <p className="text-[0.65rem] font-semibold uppercase tracking-eyebrow text-gold">{u('officialContacts')}</p>
               {phones.length || emails.length || address ? (
                 <ul className="mt-4 space-y-2 text-sm text-ivory/75">
-                  {phones.map((p) => <li key={p.value}><a className="hover:text-gold-light" href={`tel:${p.value.replace(/\s/g, '')}`}>{p.value}</a></li>)}
+                  {phones.map((p) => <li key={p.value}><a className="hover:text-gold-light" href={telHref(p.value)}>{p.value}</a></li>)}
                   {emails.map((e) => <li key={e.value}><a className="hover:text-gold-light" href={`mailto:${e.value}`}>{e.value}</a></li>)}
+                  {website && <li><a className="hover:text-gold-light" href={webHref(website.value)} target="_blank" rel="noopener noreferrer">{website.value}</a></li>}
                   {address && <li>{address}</li>}
+                  {pending && <li className="pt-1 text-xs text-ivory/45">{t({ pt: 'Dados em validação institucional.', en: 'Details pending institutional validation.' })}</li>}
                 </ul>
               ) : (
                 <p className="mt-4 max-w-sm text-sm leading-relaxed text-ivory/60">{u('contactsPending')}</p>

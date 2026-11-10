@@ -35,6 +35,8 @@ export interface Service {
   details: L[]
   image: string
   status: Verification
+  /** Serviço principal apresentado na brochura institucional (destacado na homepage). */
+  featured?: boolean
 }
 
 export interface DocumentItem {
@@ -53,6 +55,8 @@ export interface ContactInfo {
   emails: { label: L; value: string; status: Verification }[]
   address: { value: L; status: Verification }
   hours: { value: L; status: Verification }
+  /** Endereço web institucional indicado na brochura (não substitui o domínio de pré-visualização). */
+  website: { value: string; status: Verification }
   /** URL de incorporação de mapa (só quando a morada estiver confirmada). */
   mapEmbedUrl: string
   social: { label: string; url: string }[]

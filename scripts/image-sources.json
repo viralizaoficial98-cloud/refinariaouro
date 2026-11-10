@@ -105,5 +105,103 @@
     "source": "",
     "client": true,
     "official": true
+  },
+  "brochure-cover-refinery": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 1)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-precious-metals": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 3)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-laboratory-professional": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 3)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-analysis-loupe": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 4)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-refining-torch": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 4)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-contrastaria-die": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 4)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-bars-small": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 4)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-bars-medium": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 4)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-bars-large": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 4)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-electrolysis": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 5)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-aqua-regia": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 5)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-fine-gold-bars": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 5)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-fine-gold-bar": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 6)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
+  },
+  "brochure-gold-pour": {
+    "author": "Brochura institucional Refinaria de Ouro de Angola (Brochura ROA_OC_NF.pdf, p. 8)",
+    "license": "Imagem fornecida pelo cliente na brochura institucional — confirmar direitos de utilização antes da publicação definitiva",
+    "source": "",
+    "client": true,
+    "brochure": true
   }
 }

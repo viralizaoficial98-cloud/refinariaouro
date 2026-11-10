@@ -16,6 +16,9 @@ const FaqPage = lazy(() => import('./pages/FaqPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const LegalPage = lazy(() => import('./pages/LegalPage'))
 const CeoPage = lazy(() => import('./pages/CeoPage'))
+const ValueChainPage = lazy(() => import('./pages/ValueChainPage'))
+const TechnologiesPage = lazy(() => import('./pages/TechnologiesPage'))
+const ContrastariaPage = lazy(() => import('./pages/ContrastariaPage'))
 const CreditsPage = lazy(() => import('./pages/CreditsPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 const AdminApp = lazy(() => import('./admin/AdminApp'))
@@ -39,6 +42,9 @@ const router = createBrowserRouter([
       { path: path('contact'), element: <ContactPage /> },
       { path: path('legal'), element: <LegalPage /> },
       { path: path('ceo'), element: <CeoPage /> },
+      { path: path('valueChain'), element: <ValueChainPage /> },
+      { path: path('technologies'), element: <TechnologiesPage /> },
+      { path: path('contrastaria'), element: <ContrastariaPage /> },
       { path: path('credits'), element: <CreditsPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],

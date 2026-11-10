@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from '../../i18n/LanguageContext'
+import { images } from '../../content/images'
 
 export function Container({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-site px-5 sm:px-8 lg:px-12 ${className}`}>{children}</div>
@@ -62,12 +63,18 @@ export function ButtonLink({ to, children, variant = 'gold', className = '' }: {
   )
 }
 
-/** Indicação discreta de fotografia ilustrativa (não corresponde às instalações). */
-export function IllustrativeTag({ className = '', light = true }: { className?: string; light?: boolean }) {
+/**
+ * Indicação discreta da origem da fotografia: «Imagem ilustrativa» (não corresponde às instalações)
+ * ou «Brochura institucional» quando a imagem foi extraída da brochura da Refinaria.
+ * Fotografias oficiais (ex.: retrato da CEO) não recebem indicação.
+ */
+export function IllustrativeTag({ className = '', light = true, id }: { className?: string; light?: boolean; id?: string }) {
   const { u } = useLang()
+  const meta = id ? images[id] : undefined
+  if (meta?.official) return null
   return (
     <span className={`pointer-events-none select-none text-[0.6rem] font-medium uppercase tracking-[0.2em] ${light ? 'text-ivory/70' : 'text-charcoal-500'} ${className}`}>
-      {u('illustrative')}
+      {meta?.brochure ? u('brochureImage') : u('illustrative')}
     </span>
   )
 }

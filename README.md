@@ -72,6 +72,27 @@ o componente `Logo` com `tone="dark"` aplica apenas um halo luminoso muito suave
 legibilidade. O favicon usa o emblema transparente. Caminho configurável em `src/content/site.ts` (`brand.logoSrc`).
 Recomenda-se uma versão vectorial (SVG) oficial quando disponível.
 
+## Conteúdos da brochura institucional
+
+Fonte: `Brochura ROA_OC_NF.pdf` (8 páginas). Textos em `src/content/brochure.ts` (PT/EN), editáveis no
+backoffice › Conteúdos da brochura. Correcções apenas ortográficas («fabriação de barras de outo» → «fabrico de
+barras de ouro»; «A posição da marca» → «Aposição da marca»; «às necessidade» → «às necessidades»).
+
+| Página da brochura | Onde está no portal |
+| --- | --- |
+| 1 — «Ouro Angolano ganha valor em Angola.» | Homepage › Apresentação institucional (título + fotografia da capa) |
+| 2 — Apresentação, Cadeia de Valor Integrada, metais, objectivo | Homepage › Cadeia de Valor; `/cadeia-de-valor`; Sobre Nós |
+| 3 — Missão, Visão, 6 Valores | Homepage › A Refinaria; `/missao-visao-valores` |
+| 4 — Nossos Serviços (01–03), Capacidade 25 kg/dia | Homepage › Nossos Serviços e Capacidade; `/servicos`; `/cadeia-de-valor#capacidade` |
+| 5 — Técnicas de refinação, Fine Gold | Homepage › Técnicas; `/tecnologias-de-refinacao` |
+| 6–7 — Contrastaria, Vantagens e Impacto, Ensaio, Certificado, Rastreabilidade, Hallmarking | Homepage › Contrastaria; `/contrastaria-e-certificacao` |
+| 8 — Contactos e assinatura «Pureza • Autenticidade • Conformidade • Rastreabilidade» | Rodapé, `/contactos`, homepage |
+
+Fotografias: 14 imagens originais extraídas do PDF (`pdfimages`, sem capturas de página), com as máscaras de
+transparência originais aplicadas aos recortes (barras de ouro). Ficheiros `assets-src/images/brochure-*`,
+assinalados como «Brochura institucional». Ícones e texturas de fundo da brochura não foram usados.
+Versão anterior recuperável pela tag git `pre-brochura-v1`.
+
 ## Imagens e créditos
 
 - Retrato oficial da CEO (`ceo-jaimara-marques`): fotografia fornecida pela Refinaria; fundo substituído por branco
@@ -108,7 +129,10 @@ encaminhar todas as rotas para `index.html`.
 ## Pendências para publicação oficial
 
 - Versão vectorial (SVG) do logotipo e direitos das imagens do hero.
-- Contactos oficiais (telefone, e-mail, morada, mapa) → backoffice › Contactos, estado «confirmado».
+- Contactos da brochura (telefone «900 000 000» — aparenta ser provisório —, geral@roa.co.ao, www.roa.co.ao,
+  Polo de Desenvolvimento Industrial de Viana) publicados com nota «em validação» → confirmar no backoffice › Contactos.
+- Dados da brochura a validar: capacidade de 25 kg de ouro por dia; «primeira unidade do género no país»;
+  contrastaria, marcação oficial e emissão de certificados (enquadramento regulamentar); direitos das fotografias da brochura.
 - Endpoint do formulário (`VITE_CONTACT_ENDPOINT`) com validação e anti-spam no servidor (rate limit, CAPTCHA).
 - Backend do CMS (`VITE_API_BASE_URL`) com autenticação segura.
 - Validação institucional dos textos, serviços, políticas e documentos.

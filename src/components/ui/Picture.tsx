@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { fallbackSrc, images, srcSet } from '../../content/images'
 
 interface Props {
@@ -7,10 +8,11 @@ interface Props {
   className?: string
   imgClassName?: string
   priority?: boolean
+  imgStyle?: CSSProperties
 }
 
 /** Imagem responsiva AVIF/WebP com lazy loading e dimensões intrínsecas (evita CLS). */
-export function Picture({ id, alt, sizes = '100vw', className = '', imgClassName = '', priority = false }: Props) {
+export function Picture({ id, alt, sizes = '100vw', className = '', imgClassName = '', priority = false, imgStyle }: Props) {
   const meta = images[id]
   if (!meta) return <div className={`bg-forest-800 ${className}`} role="img" aria-label={alt} />
   return (
@@ -26,6 +28,7 @@ export function Picture({ id, alt, sizes = '100vw', className = '', imgClassName
         decoding={priority ? 'sync' : 'async'}
         fetchPriority={priority ? 'high' : 'auto'}
         className={imgClassName}
+        style={imgStyle}
       />
     </picture>
   )

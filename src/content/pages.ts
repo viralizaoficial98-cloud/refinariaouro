@@ -1,5 +1,6 @@
 import type { PageContent } from './types'
 import { path } from './routes'
+import { initialBrochure } from './brochure'
 
 /**
  * Conteúdo editorial das páginas internas. Textos institucionais sujeitos a
@@ -16,6 +17,8 @@ export const initialPages: Record<PageKey, PageContent> = {
     heroImage: 'crucible-casting',
     blocks: [
       { type: 'lead', text: { pt: 'Acreditamos que os recursos naturais de Angola devem gerar valor em Angola. Por isso, dedicamo-nos a transformar o ouro com os mais exigentes critérios de rigor, segurança e transparência.', en: 'We believe Angola’s natural resources should create value in Angola. That is why we transform gold to the most demanding standards of rigour, safety and transparency.' } },
+      { type: 'split', id: 'apresentacao', eyebrow: { pt: 'Apresentação institucional', en: 'Corporate profile' }, title: initialBrochure.slogan, image: 'brochure-cover-refinery', body: initialBrochure.presentation, caption: { pt: 'Fotografia da capa da brochura institucional', en: 'Cover photograph of the corporate brochure' } },
+      { type: 'pillars', eyebrow: initialBrochure.valueChain.title, title: { pt: 'Análise. Refinação. Purificação. Certificação.', en: 'Analysis. Refining. Purification. Certification.' }, intro: initialBrochure.valueChain.objective, tone: 'dark', items: initialBrochure.valueChain.steps.map((st) => ({ title: st.title, text: st.text })) },
       { type: 'split', eyebrow: { pt: 'O nosso propósito', en: 'Our purpose' }, title: { pt: 'Acrescentar valor a cada grama.', en: 'Adding value to every gram.' }, image: 'hero-bars-macro', body: [
         { pt: 'A refinação é a etapa em que o ouro adquire o grau de pureza e a identidade que lhe conferem valor nos mercados. Realizá-la em Angola significa reter conhecimento, emprego qualificado e valor económico no País.', en: 'Refining is the stage at which gold acquires the purity and identity that give it market value. Doing it in Angola means retaining knowledge, skilled employment and economic value in the country.' },
         { pt: 'A nossa actuação apoia-se em três compromissos: integridade na origem, rigor no processo e confiança no resultado.', en: 'Our work rests on three commitments: integrity at the source, rigour in the process and trust in the result.' },
@@ -57,17 +60,12 @@ export const initialPages: Record<PageKey, PageContent> = {
     intro: { pt: 'A nossa missão, visão e valores traduzem a forma como entendemos a responsabilidade de transformar um recurso nacional.', en: 'Our mission, vision and values express how we understand the responsibility of transforming a national resource.' },
     heroImage: 'hero-bars-macro',
     blocks: [
-      { type: 'quote', text: { pt: 'Transformar e valorizar o ouro com rigor técnico e responsabilidade, assegurando rastreabilidade, segurança e confiança a parceiros, mercados e sociedade.', en: 'To transform and add value to gold with technical rigour and responsibility, ensuring traceability, safety and trust for partners, markets and society.' }, attribution: { pt: 'Missão', en: 'Mission' } },
-      { type: 'quote', text: { pt: 'Afirmar-se como referência na refinação de metais preciosos em África, reconhecida pela integridade, pela qualidade e pelo contributo para o desenvolvimento de Angola.', en: 'To become a benchmark for precious-metal refining in Africa, recognised for integrity, quality and its contribution to Angola’s development.' }, attribution: { pt: 'Visão', en: 'Vision' } },
-      { type: 'pillars', eyebrow: { pt: 'Valores', en: 'Values' }, title: { pt: 'Seis valores. Um só padrão.', en: 'Six values. One standard.' }, tone: 'dark', items: [
-        { title: { pt: 'Integridade', en: 'Integrity' }, text: { pt: 'Agimos com honestidade, coerência e respeito pela lei.', en: 'We act with honesty, consistency and respect for the law.' } },
-        { title: { pt: 'Rigor', en: 'Rigour' }, text: { pt: 'Precisão técnica e disciplina em cada procedimento.', en: 'Technical precision and discipline in every procedure.' } },
-        { title: { pt: 'Segurança', en: 'Safety' }, text: { pt: 'A protecção das pessoas está acima de qualquer resultado.', en: 'Protecting people comes before any result.' } },
-        { title: { pt: 'Transparência', en: 'Transparency' }, text: { pt: 'Informação clara, verificável e responsável.', en: 'Clear, verifiable and responsible information.' } },
-        { title: { pt: 'Responsabilidade', en: 'Responsibility' }, text: { pt: 'Para com o ambiente, as comunidades e as gerações futuras.', en: 'Towards the environment, communities and future generations.' } },
-        { title: { pt: 'Excelência', en: 'Excellence' }, text: { pt: 'Ambição de cumprir os mais elevados padrões internacionais.', en: 'Ambition to meet the highest international standards.' } },
-      ] },
-      { type: 'notice', text: { pt: 'Textos institucionais sujeitos a aprovação final pelos órgãos competentes.', en: 'Institutional texts subject to final approval by the competent bodies.' } },
+      { type: 'quote', text: initialBrochure.mission[0], attribution: { pt: 'Missão', en: 'Mission' } },
+      { type: 'lead', text: initialBrochure.mission[1] },
+      { type: 'quote', text: initialBrochure.vision, attribution: { pt: 'Visão', en: 'Vision' } },
+      { type: 'pillars', eyebrow: { pt: 'Os nossos valores', en: 'Our values' }, title: { pt: 'Seis valores. Um só padrão.', en: 'Six values. One standard.' }, tone: 'dark', items: initialBrochure.values },
+      { type: 'banner', image: 'brochure-precious-metals', title: initialBrochure.slogan, text: initialBrochure.valueChain.objective },
+      { type: 'notice', text: { pt: 'Missão, visão e valores conforme a brochura institucional da Refinaria. Textos sujeitos a aprovação final pelos órgãos competentes.', en: 'Mission, vision and values as set out in the Refinery’s corporate brochure. Texts subject to final approval by the competent bodies.' } },
     ],
   },
   governance: {

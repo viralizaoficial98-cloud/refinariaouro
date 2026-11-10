@@ -12,6 +12,10 @@ import { NewsSection } from '../components/home/NewsSection'
 import { GallerySection } from '../components/home/GallerySection'
 import { PartnershipsSection } from '../components/home/PartnershipsSection'
 import { ContactSection } from '../components/home/ContactSection'
+import { ValueChainSection } from '../components/home/ValueChainSection'
+import { CapacitySection } from '../components/home/CapacitySection'
+import { TechnologiesSection } from '../components/home/TechnologiesSection'
+import { ContrastariaSection } from '../components/home/ContrastariaSection'
 import { routes } from '../content/routes'
 import { useLang } from '../i18n/LanguageContext'
 import { Seo } from '../seo/Seo'
@@ -32,9 +36,13 @@ export default function HomePage() {
       <HeroSlider />
       <CeoSection />
       <IntroSection />
+      <ValueChainSection />
       <RefinerySection />
       <ProcessStory />
       <ServicesSection />
+      <CapacitySection />
+      <TechnologiesSection />
+      <ContrastariaSection />
       <QualitySection />
       <SustainabilitySection />
       <InfrastructureSection />

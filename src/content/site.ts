@@ -55,6 +55,12 @@ export const nav: NavItem[] = [
       { label: { pt: 'Serviços e Soluções', en: 'Services and Solutions' }, to: path('services'), description: { pt: 'Áreas de competência', en: 'Areas of expertise' } },
       { label: { pt: 'Qualidade e Laboratórios', en: 'Quality and Laboratories' }, to: path('quality'), description: { pt: 'Rigor analítico', en: 'Analytical rigour' } },
       { label: { pt: 'Infraestrutura e Tecnologia', en: 'Infrastructure and Technology' }, to: path('infrastructure'), description: { pt: 'Capacidade industrial', en: 'Industrial capability' } },
+      { label: { pt: 'Cadeia de Valor Integrada', en: 'Integrated Value Chain' }, to: path('valueChain'), description: { pt: 'Análise, refinação, purificação, certificação', en: 'Analysis, refining, purification, certification' } },
+      { label: { pt: 'Capacidade de Refinação', en: 'Refining Capacity' }, to: `${path('valueChain')}#capacidade`, description: { pt: 'Capacidade declarada na brochura', en: 'Capacity stated in the brochure' } },
+      { label: { pt: 'Tecnologias de Refinação', en: 'Refining Technologies' }, to: path('technologies'), description: { pt: 'Água-régia e electrólise', en: 'Aqua regia and electrolysis' } },
+      { label: { pt: 'Contrastaria', en: 'Assay Office' }, to: path('contrastaria'), description: { pt: 'Ensaio e garantia do título', en: 'Assaying and fineness guarantee' } },
+      { label: { pt: 'Certificação e Pureza', en: 'Certification and Purity' }, to: `${path('contrastaria')}#certificacao`, description: { pt: 'Certificado de origem e pureza', en: 'Certificate of origin and purity' } },
+      { label: { pt: 'Rastreabilidade e Conformidade', en: 'Traceability and Compliance' }, to: `${path('contrastaria')}#rastreabilidade`, description: { pt: 'Cadeia de custódia do metal', en: 'The metal’s chain of custody' } },
     ],
   },
   {
@@ -88,28 +94,43 @@ export const nav: NavItem[] = [
 
 export const initialServices: Service[] = [
   {
-    id: 'refining',
-    title: { pt: 'Refinação de ouro', en: 'Gold refining' },
-    summary: { pt: 'Elevação do teor de pureza do ouro através de processos metalúrgicos controlados e documentados.', en: 'Raising gold purity through controlled, documented metallurgical processes.' },
+    id: 'assay',
+    title: { pt: 'Análise de Metais Preciosos', en: 'Precious-Metal Analysis' },
+    summary: { pt: 'Determinação precisa do teor e da composição de ouro, prata e outros metais preciosos, utilizando técnicas e equipamentos laboratoriais de referência internacional.', en: 'Precise determination of the content and composition of gold, silver and other precious metals, using laboratory techniques and equipment of international standing.' },
     details: [
-      { pt: 'Tratamento de ouro bruto e doré', en: 'Treatment of raw gold and doré' },
-      { pt: 'Separação de impurezas e metais associados', en: 'Separation of impurities and associated metals' },
-      { pt: 'Registo integral de cada lote', en: 'Full record of every lot' },
+      { pt: 'Recepção de amostras para análise', en: 'Receipt of samples for analysis' },
+      { pt: 'Ensaio por via seca e por via húmida', en: 'Fire assay and wet assay' },
+      { pt: 'Determinação do título em quilates ou partes por mil', en: 'Fineness determination in carats or parts per thousand' },
     ],
-    image: 'crucible-casting',
-    status: 'a-confirmar',
+    image: 'brochure-analysis-loupe',
+    status: 'confirmado',
+    featured: true,
   },
   {
-    id: 'assay',
-    title: { pt: 'Análise e ensaio', en: 'Analysis and assaying' },
-    summary: { pt: 'Determinação do teor de metal precioso com métodos laboratoriais reconhecidos internacionalmente.', en: 'Determining precious-metal content using internationally recognised laboratory methods.' },
+    id: 'refining',
+    title: { pt: 'Refinação e Purificação de Metais Preciosos', en: 'Precious-Metal Refining and Purification' },
+    summary: { pt: 'Processos de refinação que garantem a máxima pureza dos metais, transformando matéria-prima em produtos de elevado valor e qualidade certificada.', en: 'Refining processes that ensure maximum metal purity, transforming raw material into high-value products of certified quality.' },
     details: [
-      { pt: 'Amostragem representativa', en: 'Representative sampling' },
-      { pt: 'Ensaio por via seca e métodos instrumentais', en: 'Fire assay and instrumental methods' },
-      { pt: 'Relatórios técnicos de resultados', en: 'Technical results reports' },
+      { pt: 'Tratamento de ouro bruto e concentrados', en: 'Treatment of raw gold and concentrates' },
+      { pt: 'Tratamento por água-régia e refinação por electrólise', en: 'Aqua regia treatment and electrolytic refining' },
+      { pt: 'Fabrico de barras de ouro e prata', en: 'Manufacture of gold and silver bars' },
     ],
-    image: 'fire-assay-furnace',
+    image: 'brochure-refining-torch',
+    status: 'confirmado',
+    featured: true,
+  },
+  {
+    id: 'contrastaria',
+    title: { pt: 'Contrastaria', en: 'Assay Office (Hallmarking)' },
+    summary: { pt: 'Marcação e certificação legal de metais preciosos, atestando o seu teor e autenticidade em conformidade com as normas nacionais e internacionais aplicáveis.', en: 'Legal hallmarking and certification of precious metals, attesting their fineness and authenticity in accordance with applicable national and international standards.' },
+    details: [
+      { pt: 'Ensaio e determinação do título', en: 'Assaying and fineness determination' },
+      { pt: 'Marcação oficial (punção) de garantia de pureza', en: 'Official hallmarking (punch mark) guaranteeing purity' },
+      { pt: 'Certificados de origem, peso e título por lote', en: 'Certificates of origin, weight and fineness per lot' },
+    ],
+    image: 'brochure-contrastaria-die',
     status: 'a-confirmar',
+    featured: true,
   },
   {
     id: 'casting',
@@ -162,10 +183,12 @@ export const initialServices: Service[] = [
 ]
 
 export const initialContact: ContactInfo = {
-  phones: [{ label: { pt: 'Geral', en: 'General' }, value: '', status: 'a-confirmar' }],
-  emails: [{ label: { pt: 'Informações gerais', en: 'General enquiries' }, value: '', status: 'a-confirmar' }],
-  address: { value: { pt: '', en: '' }, status: 'a-confirmar' },
+  /* Dados da brochura institucional (p. 8) — a confirmar antes da publicação definitiva. */
+  phones: [{ label: { pt: 'Geral', en: 'General' }, value: '900 000 000', status: 'a-confirmar' }],
+  emails: [{ label: { pt: 'Informações gerais', en: 'General enquiries' }, value: 'geral@roa.co.ao', status: 'a-confirmar' }],
+  address: { value: { pt: 'Polo de Desenvolvimento Industrial de Viana, Luanda, Angola', en: 'Viana Industrial Development Hub, Luanda, Angola' }, status: 'a-confirmar' },
   hours: { value: { pt: 'Segunda a sexta-feira', en: 'Monday to Friday' }, status: 'a-confirmar' },
+  website: { value: 'www.roa.co.ao', status: 'a-confirmar' },
   mapEmbedUrl: '',
   social: [],
 }

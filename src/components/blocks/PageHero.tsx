@@ -59,7 +59,7 @@ export function PageHero({ eyebrow, title, intro, image, crumbs = [], compact = 
           </motion.p>
         )}
       </motion.div>
-      <IllustrativeTag className="absolute bottom-4 right-5 sm:right-8 lg:right-12" />
+      <IllustrativeTag id={image} className="absolute bottom-4 right-5 sm:right-8 lg:right-12" />
     </section>
   )
 }

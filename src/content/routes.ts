@@ -11,6 +11,7 @@ export type RouteKey =
   | 'process' | 'services' | 'quality' | 'sustainability' | 'hse' | 'ethics'
   | 'news' | 'gallery' | 'documents' | 'careers' | 'partners' | 'faq'
   | 'contact' | 'legal' | 'credits' | 'ceo'
+  | 'valueChain' | 'technologies' | 'contrastaria'
 
 export interface RouteMeta {
   key: RouteKey
@@ -84,6 +85,15 @@ export const routes: Record<RouteKey, RouteMeta> = {
   ceo: { key: 'ceo', path: '/lideranca/jaimara-marques', priority: 0.8,
     title: { pt: 'Eng.ª Jaimara Marques — CEO', en: 'Eng. Jaimara Marques — CEO' },
     description: { pt: 'Perfil executivo da Eng.ª Jaimara Marques, CEO da Refinaria de Ouro de Angola: biografia, percurso académico e experiência profissional.', en: 'Executive profile of Eng. Jaimara Marques, CEO of the Angola Gold Refinery: biography, education and professional experience.' } },
+  valueChain: { key: 'valueChain', path: '/cadeia-de-valor', priority: 0.8,
+    title: { pt: 'Cadeia de Valor e Capacidade', en: 'Value Chain and Capacity' },
+    description: { pt: 'Cadeia de valor integrada — análise, refinação, purificação e certificação — e capacidade de refinação da Refinaria de Ouro de Angola.', en: 'Integrated value chain — analysis, refining, purification and certification — and refining capacity of the Angola Gold Refinery.' } },
+  technologies: { key: 'technologies', path: '/tecnologias-de-refinacao', priority: 0.8,
+    title: { pt: 'Tecnologias de Refinação', en: 'Refining Technologies' },
+    description: { pt: 'Tratamento por água-régia e refinação por electrólise: os dois sistemas complementares de refinação do ouro e da prata.', en: 'Aqua regia treatment and electrolytic refining: the two complementary gold and silver refining systems.' } },
+  contrastaria: { key: 'contrastaria', path: '/contrastaria-e-certificacao', priority: 0.8,
+    title: { pt: 'Contrastaria e Certificação', en: 'Assay Office and Certification' },
+    description: { pt: 'Ensaio e determinação do título, certificado de origem e pureza, rastreabilidade, conformidade e marcação (hallmarking) de metais preciosos.', en: 'Assaying and fineness determination, certificate of origin and purity, traceability, compliance and hallmarking of precious metals.' } },
   credits: { key: 'credits', path: '/creditos-de-imagem', priority: 0.2,
     title: { pt: 'Créditos de Imagem', en: 'Image Credits' },
     description: { pt: 'Autoria, licenças e origem das fotografias utilizadas.', en: 'Authorship, licences and origin of the photographs used.' } },

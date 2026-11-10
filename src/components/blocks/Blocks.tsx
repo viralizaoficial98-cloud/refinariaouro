@@ -22,7 +22,7 @@ function Split({ b }: { b: Extract<Block, { type: 'split' }> }) {
             <motion.div style={{ y }} className="absolute -inset-y-12 inset-x-0">
               <Picture id={b.image} alt={b.caption ? t(b.caption) : t(b.title)} sizes="(min-width: 1024px) 50vw, 100vw" className="block h-full w-full" imgClassName="h-full w-full object-cover" />
             </motion.div>
-            <IllustrativeTag className="absolute bottom-4 right-4" />
+            <IllustrativeTag id={b.image} className="absolute bottom-4 right-4" />
           </MaskReveal>
           {b.caption && <p className="mt-3 text-xs text-charcoal-500">{t(b.caption)}</p>}
         </div>
@@ -71,7 +71,7 @@ function Banner({ b }: { b: Extract<Block, { type: 'banner' }> }) {
         <Reveal><Heading light className="max-w-2xl">{t(b.title)}</Heading></Reveal>
         <Reveal delay={0.1}><p className="mt-6 max-w-xl text-lg text-ivory/80">{t(b.text)}</p></Reveal>
       </Container>
-      <IllustrativeTag className="absolute bottom-4 right-5" />
+      <IllustrativeTag id={b.image} className="absolute bottom-4 right-5" />
     </section>
   )
 }

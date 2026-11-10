@@ -11,11 +11,12 @@ import { contactConfigured } from '../services/contact'
 import { FieldEditor } from './FieldEditor'
 import { Seo } from '../seo/Seo'
 
-type Section = 'dashboard' | 'leadership' | 'slides' | 'news' | 'pages' | 'services' | 'documents' | 'gallery' | 'jobs' | 'faq' | 'contact' | 'menus' | 'media' | 'export'
+type Section = 'dashboard' | 'leadership' | 'brochure' | 'slides' | 'news' | 'pages' | 'services' | 'documents' | 'gallery' | 'jobs' | 'faq' | 'contact' | 'menus' | 'media' | 'export'
 
 const sections: { key: Section; label: string }[] = [
   { key: 'dashboard', label: 'Painel' },
   { key: 'leadership', label: 'Liderança (CEO)' },
+  { key: 'brochure', label: 'Conteúdos da brochura' },
   { key: 'slides', label: 'Slides do hero' },
   { key: 'news', label: 'Notícias' },
   { key: 'pages', label: 'Páginas e textos' },
@@ -166,9 +167,14 @@ export default function AdminApp() {
     ...content.documents.filter((d) => d.status === 'a-confirmar').map((d) => `Documento: ${d.title.pt}`),
     ...content.news.filter((n) => n.sample).map((n) => `Notícia exemplificativa: ${n.title.pt}`),
     ...(content.leadership.status === 'confirmado' ? [] : ['Liderança: nome, cargo e biografia da CEO']),
-    ...(content.contact.phones.some((p) => p.status === 'confirmado') ? [] : ['Contactos: telefone oficial']),
-    ...(content.contact.emails.some((p) => p.status === 'confirmado') ? [] : ['Contactos: e-mail oficial']),
-    ...(content.contact.address.status === 'confirmado' ? [] : ['Contactos: morada e mapa']),
+    ...(content.contact.phones.some((p) => p.status === 'confirmado') ? [] : ['Contactos: telefone (brochura indica «900 000 000» — confirmar se é o número real)']),
+    ...(content.contact.emails.some((p) => p.status === 'confirmado') ? [] : ['Contactos: e-mail geral@roa.co.ao (brochura)']),
+    ...(content.contact.website?.status === 'confirmado' ? [] : ['Contactos: website www.roa.co.ao (brochura)']),
+    ...(content.contact.address.status === 'confirmado' ? [] : ['Contactos: localização Polo Industrial de Viana (brochura) e mapa']),
+    ...(content.brochure.capacity.status === 'confirmado' ? [] : ['Brochura: capacidade declarada de 25 kg de ouro por dia (confirmar actualidade)']),
+    ...(content.brochure.contrastaria.status === 'confirmado' ? [] : ['Brochura: contrastaria, certificados de origem/pureza e marcação oficial (validação regulamentar)']),
+    'Brochura: alegação «primeira unidade do género no país»',
+    'Direitos de utilização das 14 fotografias extraídas da brochura institucional',
     'Direitos de utilização das 3 imagens de referência do hero e do retrato da CEO',
   ]
 
@@ -222,6 +228,12 @@ export default function AdminApp() {
                 <p className="mt-1 text-xs text-charcoal-500">Itens que não são publicados como factos até validação oficial.</p>
                 <ul className="mt-4 max-h-80 space-y-1 overflow-y-auto text-sm">{pending.map((p) => <li key={p} className="border-l-2 border-gold pl-3">{p}</li>)}</ul>
               </div>
+            </div>
+          )}
+          {section === 'brochure' && (
+            <div className="space-y-4">
+              <p className="max-w-3xl text-sm text-charcoal-500">Textos, fotografias (identificadores de imagem), etapas da cadeia de valor, capacidade declarada, técnicas de refinação, contrastaria e traduções PT/EN extraídos da brochura institucional. Mude <code>status</code> para <code>confirmado</code> após validação.</p>
+              <ObjectEditor value={content.brochure} onSave={(v) => save('brochure', v)} />
             </div>
           )}
           {section === 'leadership' && <ObjectEditor value={content.leadership} onSave={(v) => save('leadership', v)} />}

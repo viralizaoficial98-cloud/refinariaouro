@@ -23,7 +23,7 @@ function ServiceRow({ s, i }: { s: Service; i: number }) {
             <motion.div style={{ y }} className="absolute -inset-y-10 inset-x-0">
               <Picture id={s.image} alt={t(s.title)} sizes="(min-width: 1024px) 50vw, 100vw" className="block h-full w-full" imgClassName="h-full w-full object-cover" />
             </motion.div>
-            <IllustrativeTag className="absolute bottom-4 right-4" />
+            <IllustrativeTag id={s.image} className="absolute bottom-4 right-4" />
           </MaskReveal>
         </div>
         <div className={`lg:col-span-5 ${reverse ? 'lg:order-1 lg:col-start-1' : 'lg:col-start-8'}`}>
@@ -53,9 +53,9 @@ export default function ServicesPage() {
   return (
     <>
       <Seo title={t(r.title)} description={t(r.description)} image="fire-assay-furnace" />
-      <PageHero eyebrow={t(r.title)} title={t({ pt: 'Competências técnicas ao serviço da cadeia de valor do ouro.', en: 'Technical expertise serving the gold value chain.' })} intro={t({ pt: 'Seis áreas de competência que reflectem as exigências de uma refinaria moderna — da análise à rastreabilidade.', en: 'Six areas of expertise reflecting the demands of a modern refinery — from analysis to traceability.' })} image="fire-assay-furnace" crumbs={[{ label: t(r.title) }]} />
+      <PageHero eyebrow={t(r.title)} title={t({ pt: 'Competências técnicas ao serviço da cadeia de valor do ouro.', en: 'Technical expertise serving the gold value chain.' })} intro={t({ pt: 'Três serviços principais — análise, refinação e purificação, e contrastaria — complementados por áreas de competência técnica.', en: 'Three core services — analysis, refining and purification, and assay office — complemented by areas of technical expertise.' })} image="fire-assay-furnace" crumbs={[{ label: t(r.title) }]} />
       <section className="bg-ivory pt-16">
-        <Container><Reveal><PendingNote className="max-w-3xl">{t({ pt: 'Importante: as áreas abaixo descrevem o âmbito previsto. Nenhuma deve ser entendida como serviço comercial efectivamente disponibilizado até confirmação institucional, a publicar nesta página.', en: 'Important: the areas below describe the planned scope. None should be understood as a commercially available service until institutional confirmation, to be published on this page.' })}</PendingNote></Reveal></Container>
+        <Container><Reveal><PendingNote className="max-w-3xl">{t({ pt: 'Os serviços 01 a 03 são os serviços principais apresentados na brochura institucional da Refinaria. As áreas seguintes descrevem o âmbito complementar previsto e não devem ser entendidas como serviço comercial efectivamente disponibilizado até confirmação institucional. A contrastaria e a emissão de certificados estão sujeitas a validação regulamentar.', en: 'Services 01 to 03 are the core services presented in the Refinery’s corporate brochure. The following areas describe the planned complementary scope and should not be understood as commercially available services until institutional confirmation. The assay office and the issue of certificates are subject to regulatory validation.' })}</PendingNote></Reveal></Container>
       </section>
       {content.services.map((s, i) => <ServiceRow key={s.id} s={s} i={i} />)}
       <section className="bg-forest-900 py-20 text-ivory">

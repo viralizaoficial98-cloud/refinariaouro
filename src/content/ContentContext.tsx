@@ -4,6 +4,7 @@ import { initialContact, initialDocuments, initialFaq, initialGallery, initialJo
 import { initialNews } from './news'
 import { initialPages, type PageKey } from './pages'
 import { initialLeadership, type LeaderProfile } from './leadership'
+import { initialBrochure, type BrochureContent } from './brochure'
 
 export interface SiteContent {
   slides: Slide[]
@@ -16,6 +17,7 @@ export interface SiteContent {
   contact: ContactInfo
   pages: Record<PageKey, PageContent>
   leadership: LeaderProfile
+  brochure: BrochureContent
 }
 
 export const initialContent: SiteContent = {
@@ -29,6 +31,7 @@ export const initialContent: SiteContent = {
   contact: initialContact,
   pages: initialPages,
   leadership: initialLeadership,
+  brochure: initialBrochure,
 }
 
 interface ContentCtx {

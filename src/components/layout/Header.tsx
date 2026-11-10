@@ -115,9 +115,9 @@ export function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 6 }}
                           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                          className="absolute left-1/2 top-full w-[22rem] -translate-x-1/2 pt-3"
+                          className={`absolute left-1/2 top-full -translate-x-1/2 pt-3 ${item.children.length > 6 ? 'w-[42rem]' : 'w-[22rem]'}`}
                         >
-                          <ul className="border-t-2 border-gold bg-ivory p-3 shadow-[0_30px_60px_-20px_rgba(22,27,24,0.35)]">
+                          <ul className={`border-t-2 border-gold bg-ivory p-3 shadow-[0_30px_60px_-20px_rgba(22,27,24,0.35)] ${item.children.length > 6 ? 'grid grid-cols-2' : ''}`}>
                             {item.children.map((c) => (
                               <li key={c.to}>
                                 <NavLink
